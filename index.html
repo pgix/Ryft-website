@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Ryft – Your Personal Reel Script Writer</title>
+  <meta name="description" content="Ryft helps coaches, creators, and entrepreneurs generate Instagram Reel scripts in under 2 minutes. Join the waitlist!">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #635bff;
+      --primary-dark: #4b45c8;
+      --background: #f8f8fc;
+      --foreground: #181830;
+      --accent: #f4f0ff;
+      --card-bg: #fff;
+      --border: #e9e9f3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.2rem;
+    }
+    header {
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    .app-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    .tagline {
+      font-size: 1.35rem;
+      margin: 0.7rem 0 1.8rem 0;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 999px;
+      padding: 0.9em 2.2em;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 3px 16px 0 rgba(99,91,255,0.07);
+      margin-top: 1.3rem;
+    }
+    .cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 1.1rem;
+      color: var(--primary-dark);
+    }
+    .problem-solution {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.3rem;
+    }
+    .problem-solution > div {
+      flex: 1;
+      min-width: 240px;
+      background: var(--card-bg);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.2rem;
+      box-shadow: 0 2px 10px 0 rgba(99,91,255,0.04);
+    }
+    .problem-solution strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      color: var(--primary);
+    }
+    ul.feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0 0;
+    }
+    ul.feature-list li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.08rem;
+      margin-bottom: 1rem;
+      gap: 0.75em;
+    }
+    ul.feature-list li .icon {
+      font-size: 1.25em;
+      width: 1.8em;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .workflow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin: 1.3rem 0 2rem 0;
+    }
+    .workflow-steps .step {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      border-radius: 0.6em;
+      padding: 0.9em 1.1em;
+      font-weight: 500;
+      font-size: 1.07rem;
+    }
+
+    .user-types, .value-prop-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      margin: 1.3rem 0 2rem 0;
+    }
+    .user-types .user, .value-prop-list .prop {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.8em;
+      padding: 0.9em 1em;
+      flex: 1 1 220px;
+      display: flex;
+      align-items: center;
+      font-size: 1.05rem;
+      gap: 0.7em;
+      font-weight: 500;
+      min-width: 180px;
+    }
+    .user-types .icon, .value-prop-list .icon {
+      font-size: 1.4em;
+      flex-shrink: 0;
+    }
+
+    .main-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2.4rem 0;
+      text-align: center;
+    }
+    .main-cta .cta {
+      margin-top: 1.2rem;
+    }
+    .main-cta p {
+      margin: 1rem 0 0.4rem;
+      font-size: 1.07rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.97rem;
+      color: #7a7a9d;
+      background: #fafaff;
+      margin-top: 2rem;
+      padding: 1.7rem 1.2rem 1rem 1.2rem;
+    }
+    footer a {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header, section, footer {
+        padding: 2rem 0.7rem;
+      }
+      .problem-solution, .user-types, .value-prop-list {
+        flex-direction: column;
+      }
+      .user-types .user, .value-prop-list .prop {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="app-name">Ryft</div>
+    <div class="tagline">Your personal reel script writer</div>
+    <button class="cta" onclick="window.location.href='mailto:hello@ryft.ai?subject=Join Ryft Waitlist'">Join the Waitlist</button>
+  </header>
+
+  <section>
+    <div class="section-title">Problem & Solution</div>
+    <div class="problem-solution">
+      <div>
+        <strong>The Problem:</strong>
+        <ul>
+          <li>Posting Instagram Reels consistently is hard.<br>You spend hours brainstorming ideas.</li>
+          <li>Writing scripts feels overwhelming.</li>
+          <li>Talking to the camera creates anxiety.</li>
+          <li>Inconsistency kills your audience growth.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>The Solution:</strong>
+        Ryft is your personal script expert. Instantly generate ready-to-record scripts under 120 seconds—so you can show up confidently, post consistently, and grow your influence.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Features Overview</div>
+    <ul class="feature-list">
+      <li><span class="icon">✨</span> <b>Idea Generation</b> – Endless reel topic ideas in your niche.</li>
+      <li><span class="icon">✍️</span> <b>Script Generation</b> – Polished talking-head scripts in seconds.</li>
+      <li><span class="icon">📐</span> <b>Reel Structuring</b> – Choose from 3 options for each section: Hook, CTA, Contrarian Angle, Anchor.</li>
+      <li><span class="icon">💾</span> <b>Script Saving & Editing</b> – Save, tweak, and reuse scripts anytime.</li>
+      <li><span class="icon">🗣️</span> <b>Teleprompter</b> – Read your script to camera smoothly.</li>
+      <li><span class="icon">⚡</span> <b>Efficiency Boost</b> – From blank screen to ready-to-record in under 2 minutes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-title">How It Works</div>
+    <div class="workflow-steps">
+      <div class="step"><b>Pick a Topic</b> – Select your niche or area of expertise.</div>
+      <div class="step"><b>Generate Ideas</b> – Ryft suggests fresh reel topics instantly.</div>
+      <div class="step"><b>Build Your Script</b> – Get 3 options for each section and mix & match.</div>
+      <div class="step"><b>Save & Edit</b> – Store scripts, refine them, and keep a library.</div>
+      <div class="step"><b>Teleprompter</b></div>
+      <div class="step"><b>Record with Confidence</b> – Read your script, hit record, and post.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Target Users</div>
+    <div class="user-types">
+      <div class="user"><span class="icon">🎙️</span> Coaches who want to share their expertise.</div>
+      <div class="user"><span class="icon">🎨</span> Creators who want consistent content without burnout.</div>
+      <div class="user"><span class="icon">💼</span> Entrepreneurs building authority in their domain.</div>
+      <div class="user"><span class="icon">📊</span> Consultants & Professionals proving thought leadership.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Why Ryft?</div>
+    <div class="value-prop-list">
+      <div class="prop"><span class="icon">⚡</span> <b>Quick</b> – Ideas + scripts in under 2 minutes.</div>
+      <div class="prop"><span class="icon">👌</span> <b>Easy</b> – Zero scripting skills required.</div>
+      <div class="prop"><span class="icon">💪</span> <b>Confidence-Boosting</b> – Removes camera anxiety.</div>
+      <div class="prop"><span class="icon">📅</span> <b>Consistency-Driven</b> – Helps you post regularly without running out of ideas.</div>
+    </div>
+  </section>
+
+  <section class="main-cta">
+    <div class="section-title" style="margin-bottom:0.6rem;">Join the Waitlist</div>
+    <p>Don’t miss early access to Ryft. Start posting confidently and consistently.</p>
+    <button class="cta" onclick="window.location.href='mailto:hello@ryft.ai?subject=Join Ryft Waitlist'">Join the Waitlist</button>
+  </section>
+
+  <footer>
+    📧 Contact: <a href="mailto:hello@ryft.ai">hello@ryft.ai</a><br><br>
+    © 2025 Ryft. All rights reserved.
+  </footer>
+</body>
+</html>
